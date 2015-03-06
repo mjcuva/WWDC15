@@ -14,7 +14,6 @@
 		4999918F1AA93BE3008CF211 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4999918D1AA93BE3008CF211 /* LaunchScreen.xib */; };
 		4999919B1AA93BE3008CF211 /* WWDC15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4999919A1AA93BE3008CF211 /* WWDC15Tests.swift */; };
 		499991A81AA94A8F008CF211 /* IMG_0247.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 499991A71AA94A8F008CF211 /* IMG_0247.jpg */; };
-		499991AE1AA9565F008CF211 /* UIImage+ImageBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 499991AD1AA9565F008CF211 /* UIImage+ImageBlur.m */; };
 		499991B11AA95735008CF211 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 499991B01AA95735008CF211 /* UIImage+StackBlur.m */; };
 		499991B31AA95C82008CF211 /* BorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499991B21AA95C82008CF211 /* BorderLabel.swift */; };
 /* End PBXBuildFile section */
@@ -42,8 +41,6 @@
 		4999919A1AA93BE3008CF211 /* WWDC15Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC15Tests.swift; sourceTree = "<group>"; };
 		499991A71AA94A8F008CF211 /* IMG_0247.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0247.jpg; path = Images/IMG_0247.jpg; sourceTree = "<group>"; };
 		499991AB1AA9565F008CF211 /* WWDC15-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WWDC15-Bridging-Header.h"; sourceTree = "<group>"; };
-		499991AC1AA9565F008CF211 /* UIImage+ImageBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageBlur.h"; sourceTree = "<group>"; };
-		499991AD1AA9565F008CF211 /* UIImage+ImageBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageBlur.m"; sourceTree = "<group>"; };
 		499991AF1AA95735008CF211 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
 		499991B01AA95735008CF211 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
 		499991B21AA95C82008CF211 /* BorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderLabel.swift; sourceTree = "<group>"; };
@@ -91,8 +88,6 @@
 			children = (
 				499991AF1AA95735008CF211 /* UIImage+StackBlur.h */,
 				499991B01AA95735008CF211 /* UIImage+StackBlur.m */,
-				499991AC1AA9565F008CF211 /* UIImage+ImageBlur.h */,
-				499991AD1AA9565F008CF211 /* UIImage+ImageBlur.m */,
 				499991841AA93BE3008CF211 /* AppDelegate.swift */,
 				499991861AA93BE3008CF211 /* ViewController.swift */,
 				499991B21AA95C82008CF211 /* BorderLabel.swift */,
@@ -234,7 +229,6 @@
 			files = (
 				499991871AA93BE3008CF211 /* ViewController.swift in Sources */,
 				499991B11AA95735008CF211 /* UIImage+StackBlur.m in Sources */,
-				499991AE1AA9565F008CF211 /* UIImage+ImageBlur.m in Sources */,
 				499991851AA93BE3008CF211 /* AppDelegate.swift in Sources */,
 				499991B31AA95C82008CF211 /* BorderLabel.swift in Sources */,
 			);
