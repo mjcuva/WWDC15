@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		494EDA801AE8713F003647A5 /* MasterScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EDA7F1AE8713F003647A5 /* MasterScrollView.swift */; };
+		492B72711AE997540014DED3 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B72701AE997540014DED3 /* AnimationController.swift */; };
+		494EDA801AE8713F003647A5 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EDA7F1AE8713F003647A5 /* MasterVC.swift */; };
 		499991851AA93BE3008CF211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499991841AA93BE3008CF211 /* AppDelegate.swift */; };
 		499991871AA93BE3008CF211 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499991861AA93BE3008CF211 /* ViewController.swift */; };
 		4999918A1AA93BE3008CF211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499991881AA93BE3008CF211 /* Main.storyboard */; };
@@ -30,7 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		494EDA7F1AE8713F003647A5 /* MasterScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterScrollView.swift; sourceTree = "<group>"; };
+		492B72701AE997540014DED3 /* AnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		494EDA7F1AE8713F003647A5 /* MasterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		4999917F1AA93BE3008CF211 /* Marc Cuva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marc Cuva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		499991831AA93BE3008CF211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		499991841AA93BE3008CF211 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +93,8 @@
 				499991AF1AA95735008CF211 /* UIImage+StackBlur.h */,
 				499991B01AA95735008CF211 /* UIImage+StackBlur.m */,
 				499991841AA93BE3008CF211 /* AppDelegate.swift */,
-				494EDA7F1AE8713F003647A5 /* MasterScrollView.swift */,
+				494EDA7F1AE8713F003647A5 /* MasterVC.swift */,
+				492B72701AE997540014DED3 /* AnimationController.swift */,
 				499991861AA93BE3008CF211 /* ViewController.swift */,
 				499991B21AA95C82008CF211 /* BorderLabel.swift */,
 				499991881AA93BE3008CF211 /* Main.storyboard */,
@@ -230,7 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494EDA801AE8713F003647A5 /* MasterScrollView.swift in Sources */,
+				492B72711AE997540014DED3 /* AnimationController.swift in Sources */,
+				494EDA801AE8713F003647A5 /* MasterVC.swift in Sources */,
 				499991871AA93BE3008CF211 /* ViewController.swift in Sources */,
 				499991B11AA95735008CF211 /* UIImage+StackBlur.m in Sources */,
 				499991851AA93BE3008CF211 /* AppDelegate.swift in Sources */,

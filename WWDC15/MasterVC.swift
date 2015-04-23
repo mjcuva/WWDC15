@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MasterScrollView : UIViewController {
+class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
     
     var image : UIImage!
     var imageView : UIImageView!
@@ -23,6 +23,8 @@ class MasterScrollView : UIViewController {
     
     var open = false
     var frame = CGRectZero
+    
+    var animationController = AnimationController()
     
     override func viewDidLoad() {
         
@@ -96,5 +98,22 @@ class MasterScrollView : UIViewController {
         })
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var end =  segue.destinationViewController as! UIViewController
+        end.transitioningDelegate = self
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        animationController.isOpening = true
+        return animationController
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        animationController.isOpening = false
+        return animationController
+    }
+    
+    
 
 }
