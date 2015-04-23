@@ -16,13 +16,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     var image: UIImage!
     
-    var titleLabel: UILabel!
+    var titleLabel: BorderLabel!
+    var bodyText: BorderLabel!
     
     var sv: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         setNeedsStatusBarAppearanceUpdate()
         
@@ -46,14 +46,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         view.addSubview(halfBlurredImageView)
         view.addSubview(mainImageView)
         
-        titleLabel = BorderLabel(frame: CGRectMake(view.frame.size.width * 3/5, view.frame.size.height * 1/2, 400, 100))
-        titleLabel.text = "Hello!"
-        titleLabel.textColor = UIColor.whiteColor()
-        titleLabel.font = UIFont.systemFontOfSize(50)
         
         sv = UIScrollView(frame: view.frame)
         sv.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height * 3/2)
         sv.addSubview(titleLabel)
+        sv.addSubview(bodyText)
         sv.delegate = self
         
         view.addSubview(sv)
@@ -66,11 +63,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         var offset = scrollView.contentOffset.y
+        var scrollViewHeight = scrollView.frame.size.height
+        var scrollContentSizeHeight = scrollView.contentSize.height
         
         if(offset < view.frame.size.height / 3){
             mainImageView.alpha = 1 - (offset / (view.frame.size.height / 3))
         }else if(offset < view.frame.size.height){
             halfBlurredImageView.alpha = 1 - (offset / view.frame.size.height)
+        }
+        
+        if(offset + scrollViewHeight == scrollContentSizeHeight){
+            NSLog("HERE")
         }
         
     }
