@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		492B72711AE997540014DED3 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B72701AE997540014DED3 /* AnimationController.swift */; };
+		492B72731AE9DA3D0014DED3 /* WorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B72721AE9DA3D0014DED3 /* WorkVC.swift */; };
+		492B72751AE9DCEB0014DED3 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B72741AE9DCEB0014DED3 /* InfoVC.swift */; };
+		492B72771AE9E7940014DED3 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B72761AE9E7940014DED3 /* ScrollingView.swift */; };
+		492B72881AE9F16C0014DED3 /* DecelerationBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 492B72851AE9F16C0014DED3 /* DecelerationBehaviour.m */; };
+		492B72891AE9F16C0014DED3 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 492B72871AE9F16C0014DED3 /* UIImage+StackBlur.m */; };
 		494EDA801AE8713F003647A5 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EDA7F1AE8713F003647A5 /* MasterVC.swift */; };
 		499991851AA93BE3008CF211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499991841AA93BE3008CF211 /* AppDelegate.swift */; };
 		499991871AA93BE3008CF211 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499991861AA93BE3008CF211 /* ViewController.swift */; };
@@ -16,7 +21,6 @@
 		4999918F1AA93BE3008CF211 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4999918D1AA93BE3008CF211 /* LaunchScreen.xib */; };
 		4999919B1AA93BE3008CF211 /* WWDC15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4999919A1AA93BE3008CF211 /* WWDC15Tests.swift */; };
 		499991A81AA94A8F008CF211 /* IMG_0247.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 499991A71AA94A8F008CF211 /* IMG_0247.jpg */; };
-		499991B11AA95735008CF211 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 499991B01AA95735008CF211 /* UIImage+StackBlur.m */; };
 		499991B31AA95C82008CF211 /* BorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499991B21AA95C82008CF211 /* BorderLabel.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,14 @@
 
 /* Begin PBXFileReference section */
 		492B72701AE997540014DED3 /* AnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		492B72721AE9DA3D0014DED3 /* WorkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkVC.swift; sourceTree = "<group>"; };
+		492B72741AE9DCEB0014DED3 /* InfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		492B72761AE9E7940014DED3 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
+		492B72841AE9F16C0014DED3 /* DecelerationBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecelerationBehaviour.h; sourceTree = "<group>"; };
+		492B72851AE9F16C0014DED3 /* DecelerationBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecelerationBehaviour.m; sourceTree = "<group>"; };
+		492B72861AE9F16C0014DED3 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
+		492B72871AE9F16C0014DED3 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
+		492B728A1AE9F1920014DED3 /* Marc-Cuva-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marc-Cuva-BridgingHeader.h"; sourceTree = "<group>"; };
 		494EDA7F1AE8713F003647A5 /* MasterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		4999917F1AA93BE3008CF211 /* Marc Cuva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marc Cuva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		499991831AA93BE3008CF211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,9 +56,6 @@
 		499991991AA93BE3008CF211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4999919A1AA93BE3008CF211 /* WWDC15Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC15Tests.swift; sourceTree = "<group>"; };
 		499991A71AA94A8F008CF211 /* IMG_0247.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0247.jpg; path = Images/IMG_0247.jpg; sourceTree = "<group>"; };
-		499991AB1AA9565F008CF211 /* WWDC15-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WWDC15-Bridging-Header.h"; sourceTree = "<group>"; };
-		499991AF1AA95735008CF211 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
-		499991B01AA95735008CF211 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
 		499991B21AA95C82008CF211 /* BorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +83,6 @@
 				499991811AA93BE3008CF211 /* WWDC15 */,
 				499991971AA93BE3008CF211 /* WWDC15Tests */,
 				499991801AA93BE3008CF211 /* Products */,
-				499991AB1AA9565F008CF211 /* WWDC15-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,17 +98,23 @@
 		499991811AA93BE3008CF211 /* WWDC15 */ = {
 			isa = PBXGroup;
 			children = (
-				499991AF1AA95735008CF211 /* UIImage+StackBlur.h */,
-				499991B01AA95735008CF211 /* UIImage+StackBlur.m */,
+				492B72841AE9F16C0014DED3 /* DecelerationBehaviour.h */,
+				492B72851AE9F16C0014DED3 /* DecelerationBehaviour.m */,
+				492B72861AE9F16C0014DED3 /* UIImage+StackBlur.h */,
+				492B72871AE9F16C0014DED3 /* UIImage+StackBlur.m */,
+				499991881AA93BE3008CF211 /* Main.storyboard */,
 				499991841AA93BE3008CF211 /* AppDelegate.swift */,
-				494EDA7F1AE8713F003647A5 /* MasterVC.swift */,
 				492B72701AE997540014DED3 /* AnimationController.swift */,
+				494EDA7F1AE8713F003647A5 /* MasterVC.swift */,
+				492B72741AE9DCEB0014DED3 /* InfoVC.swift */,
+				492B72721AE9DA3D0014DED3 /* WorkVC.swift */,
 				499991861AA93BE3008CF211 /* ViewController.swift */,
 				499991B21AA95C82008CF211 /* BorderLabel.swift */,
-				499991881AA93BE3008CF211 /* Main.storyboard */,
+				492B72761AE9E7940014DED3 /* ScrollingView.swift */,
 				4999918B1AA93BE3008CF211 /* Images.xcassets */,
 				4999918D1AA93BE3008CF211 /* LaunchScreen.xib */,
 				499991821AA93BE3008CF211 /* Supporting Files */,
+				492B728A1AE9F1920014DED3 /* Marc-Cuva-BridgingHeader.h */,
 			);
 			path = WWDC15;
 			sourceTree = "<group>";
@@ -233,12 +247,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492B72881AE9F16C0014DED3 /* DecelerationBehaviour.m in Sources */,
 				492B72711AE997540014DED3 /* AnimationController.swift in Sources */,
 				494EDA801AE8713F003647A5 /* MasterVC.swift in Sources */,
 				499991871AA93BE3008CF211 /* ViewController.swift in Sources */,
-				499991B11AA95735008CF211 /* UIImage+StackBlur.m in Sources */,
+				492B72771AE9E7940014DED3 /* ScrollingView.swift in Sources */,
+				492B72891AE9F16C0014DED3 /* UIImage+StackBlur.m in Sources */,
+				492B72751AE9DCEB0014DED3 /* InfoVC.swift in Sources */,
 				499991851AA93BE3008CF211 /* AppDelegate.swift in Sources */,
 				499991B31AA95C82008CF211 /* BorderLabel.swift in Sources */,
+				492B72731AE9DA3D0014DED3 /* WorkVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +386,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WWDC15-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "WWDC15/Marc-Cuva-BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -382,7 +400,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WWDC15-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "WWDC15/Marc-Cuva-BridgingHeader.h";
 			};
 			name = Release;
 		};

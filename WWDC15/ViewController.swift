@@ -16,49 +16,43 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     var image: UIImage!
     
-    var titleLabel: BorderLabel!
-    var bodyText: BorderLabel!
+//    var titleLabel: BorderLabel!
+//    var bodyText: BorderLabel!
     
     var sv: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNeedsStatusBarAppearanceUpdate()
+//        var mainFrame = CGRectMake(0, 0, view.frame.size.width, view.frame.size.height)
+//        mainImageView = UIImageView(frame: mainFrame)
+//        image = UIImage(named: "IMG_0247.jpg")
+//        mainImageView.image = image
+//        mainImageView.contentMode = UIViewContentMode.ScaleAspectFill
+//        
+//        var halfBlurredImage = image.stackBlur(45)
+//        halfBlurredImageView = UIImageView(frame: mainFrame)
+//        halfBlurredImageView.image = halfBlurredImage
+//        halfBlurredImageView.contentMode = UIViewContentMode.ScaleAspectFill
+//
+//        var fullBlurredImage = image.stackBlur(90)
+//        fullBlurredImageView = UIImageView(frame: mainFrame)
+//        fullBlurredImageView.image = fullBlurredImage
+//        fullBlurredImageView.contentMode = UIViewContentMode.ScaleAspectFill
+//        
+//        view.addSubview(fullBlurredImageView)
+//        view.addSubview(halfBlurredImageView)
+//        view.addSubview(mainImageView)
+//        
+//        
+//        sv = UIScrollView(frame: view.frame)
+//        sv.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height * 3/2)
+////        sv.addSubview(titleLabel)
+////        sv.addSubview(bodyText)
+//        sv.delegate = self
+//        
+//        view.addSubview(sv)
         
-        var mainFrame = CGRectMake(0, 0, view.frame.size.width, view.frame.size.height)
-        mainImageView = UIImageView(frame: mainFrame)
-        image = UIImage(named: "IMG_0247.jpg")
-        mainImageView.image = image
-        mainImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        
-        var halfBlurredImage = image.stackBlur(45)
-        halfBlurredImageView = UIImageView(frame: mainFrame)
-        halfBlurredImageView.image = halfBlurredImage
-        halfBlurredImageView.contentMode = UIViewContentMode.ScaleAspectFill
-
-        var fullBlurredImage = image.stackBlur(90)
-        fullBlurredImageView = UIImageView(frame: mainFrame)
-        fullBlurredImageView.image = fullBlurredImage
-        fullBlurredImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        
-        view.addSubview(fullBlurredImageView)
-        view.addSubview(halfBlurredImageView)
-        view.addSubview(mainImageView)
-        
-        
-        sv = UIScrollView(frame: view.frame)
-        sv.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height * 3/2)
-        sv.addSubview(titleLabel)
-        sv.addSubview(bodyText)
-        sv.delegate = self
-        
-        view.addSubview(sv)
-        
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -71,11 +65,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }else if(offset < view.frame.size.height){
             halfBlurredImageView.alpha = 1 - (offset / view.frame.size.height)
         }
-        
-        if(offset + scrollViewHeight == scrollContentSizeHeight){
-            NSLog("HERE")
-        }
-        
     }
 
 }

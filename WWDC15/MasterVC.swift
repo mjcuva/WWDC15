@@ -21,9 +21,6 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
     
     var buttons = [UIView]()
     
-    var open = false
-    var frame = CGRectZero
-    
     var animationController = AnimationController()
     
     override func viewDidLoad() {
@@ -84,23 +81,14 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
     
     func buttonClick(sender : UITapGestureRecognizer){
         var button = sender.view!
-        UIView.animateWithDuration(0.5, animations: {
-            if(self.open){
-                button.frame = self.frame
-                button.alpha = 0.3
-            }else{
-                self.frame = button.frame
-                button.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
-                button.alpha = 1
-            }
-            self.open = !self.open
-            
-        })
+        animationController.startFrame = button.frame
+        animationController.transitionFrame = CGRectMake(0,0, view.frame.size.width, view.frame.height)
+        performSegueWithIdentifier("Work", sender: self)
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var end =  segue.destinationViewController as! UIViewController
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        var end =  segue.destinationViewController as! InfoVC
         end.transitioningDelegate = self
     }
     

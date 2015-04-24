@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Master Scroll View-->
+        <!--MasterVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MasterScrollView" customModule="WWDC15" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MasterVC" customModule="Marc_Cuva" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,10 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="ccU-Zw-4WY" kind="modal" identifier="Work" id="E6E-jq-haK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444.75" y="390"/>
+            <point key="canvasLocation" x="369.75" y="426"/>
+        </scene>
+        <!--WorkVC-->
+        <scene sceneID="Oc3-UC-lUT">
+            <objects>
+                <viewController id="ccU-Zw-4WY" customClass="WorkVC" customModule="Marc_Cuva" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lt6-lw-AgR"/>
+                        <viewControllerLayoutGuide type="bottom" id="D4P-lf-ju0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ffc-FJ-KTd">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUj-fx-Pye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1349.25" y="409.5"/>
         </scene>
     </scenes>
 </document>
