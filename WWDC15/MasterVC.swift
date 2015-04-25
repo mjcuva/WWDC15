@@ -19,7 +19,7 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
     var titleLabel: BorderLabel!
     var bodyText: BorderLabel!
     
-    var buttons = [UIView]()
+    var buttons = [ButtonView]()
     
     var animationController = AnimationController()
     
@@ -33,17 +33,19 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
         var aspectRatio = view.frame.size.width / image.size.width
         imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, view.frame.size.height * aspectRatio))
         imageView.image = image
+        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView.clipsToBounds = true
         
         view.addSubview(imageView)
         
-        titleLabel = BorderLabel(frame: CGRectMake(view.frame.size.width * 3/5, imageView.frame.size.height * 1/4, 400, 100))
+        titleLabel = BorderLabel(frame: CGRectMake(view.frame.size.width * 3/5, imageView.frame.size.height * 1/5, 400, 100))
         
         // Should load text from a file
         titleLabel.text = "Hello!"
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.font = UIFont.systemFontOfSize(50)
         
-        bodyText = BorderLabel(frame: CGRectMake(view.frame.size.width / 2 - 30, imageView.frame.size.height * 1/2, 400, 100))
+        bodyText = BorderLabel(frame: CGRectMake(view.frame.size.width / 2 - 30, imageView.frame.size.height * 1/2 - 20, 400, 100))
         bodyText.font = UIFont.systemFontOfSize(25)
         bodyText.textColor = UIColor.whiteColor()
         bodyText.numberOfLines = 0
@@ -58,20 +60,27 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
         
         view.addSubview(blurImageView)
         
-        buttons.append(UIView(frame: CGRectMake(0, blurImageView.frame.origin.y, view.frame.size.width / 2 - 2, blurImageView.frame.size.height / 2 - 2)))
-        buttons.append(UIView(frame: CGRectMake(blurImageView.frame.size.width / 2 + 2, blurImageView.frame.origin.y, view.frame.size.width / 2 - 2, blurImageView.frame.size.height / 2 - 2)))
-        buttons.append(UIView(frame: CGRectMake(0, blurImageView.frame.origin.y + blurImageView.frame.size.height / 2 + 2, view.frame.size.width / 2 - 2, blurImageView.frame.size.height / 2 - 2)))
-        buttons.append(UIView(frame: CGRectMake(blurImageView.frame.size.width / 2 + 2, blurImageView.frame.origin.y + blurImageView.frame.size.height / 2 + 2, view.frame.size.width / 2 - 2, blurImageView.frame.size.height / 2 - 2)))
+        let buttonSize = CGSizeMake(view.frame.size.width / 2, blurImageView.frame.size.height / 2)
         
-//        buttons.append(UIView(frame: CGRectMake(0, blurImageView.frame.origin.y, view.frame.size.width / 3 - 2, blurImageView.frame.size.height)))
-//
-//        buttons.append(UIView(frame: CGRectMake(buttons[0].frame.size.width + 2, blurImageView.frame.origin.y, view.frame.size.width / 3 - 4, blurImageView.frame.size.height)))
-//        
-//        buttons.append(UIView(frame: CGRectMake(buttons[0].frame.size.width * 2 + 2, blurImageView.frame.origin.y, view.frame.size.width / 3, blurImageView.frame.size.height)))
+        buttons.append(ButtonView(frame: CGRectMake(0, blurImageView.frame.origin.y, buttonSize.width, buttonSize.height)))
+        buttons.append(ButtonView(frame: CGRectMake(blurImageView.frame.size.width / 2, blurImageView.frame.origin.y, buttonSize.width, buttonSize.height)))
+        buttons.append(ButtonView(frame: CGRectMake(0, blurImageView.frame.origin.y + blurImageView.frame.size.height / 2, buttonSize.width, buttonSize.height)))
+        buttons.append(ButtonView(frame: CGRectMake(blurImageView.frame.size.width / 2, blurImageView.frame.origin.y + blurImageView.frame.size.height / 2, buttonSize.width, buttonSize.height)))
+    
+
+        
+        var colors = [ORANGE_COLOR, LIGHT_BLUE_COLOR, BLUE_COLOR, RED_COLOR]
+        var images = ["Thomson-Reuters.jpg", "umn.jpg", "hidrate.png", "lighthouse.jpg"]
+        var buttonText = ["Work Experience", "Education", "Accomplishments", "Skills & Interests"]
         
         for(var i = 0; i < buttons.count; i++){
-            buttons[i].backgroundColor = UIColor.whiteColor()
-            buttons[i].alpha = 0.3
+            
+            var image = UIImage(named: images[i])?.stackBlur(10)
+            buttons[i].setImage(image!)
+            
+            buttons[i].setTitle(buttonText[i])
+            
+            buttons[i].setColor(colors[i])
             
             var touch = UITapGestureRecognizer(target: self, action: "buttonClick:")
             buttons[i].addGestureRecognizer(touch)

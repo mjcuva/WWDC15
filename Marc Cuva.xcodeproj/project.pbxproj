@@ -25,6 +25,8 @@
 		492B72A21AEB21730014DED3 /* skills.html in Resources */ = {isa = PBXBuildFile; fileRef = 492B72A11AEB21730014DED3 /* skills.html */; };
 		492B72A41AEB22950014DED3 /* lighthouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 492B72A31AEB22950014DED3 /* lighthouse.jpg */; };
 		492B72A71AEB24A10014DED3 /* Thomson-Reuters.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 492B72A61AEB24A10014DED3 /* Thomson-Reuters.jpg */; };
+		492B72AA1AEBF23F0014DED3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B72A91AEBF23F0014DED3 /* Colors.swift */; };
+		492B72AC1AEC07500014DED3 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B72AB1AEC07500014DED3 /* ButtonView.swift */; };
 		494EDA801AE8713F003647A5 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EDA7F1AE8713F003647A5 /* MasterVC.swift */; };
 		499991851AA93BE3008CF211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499991841AA93BE3008CF211 /* AppDelegate.swift */; };
 		4999918A1AA93BE3008CF211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499991881AA93BE3008CF211 /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		492B72A11AEB21730014DED3 /* skills.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = skills.html; sourceTree = "<group>"; };
 		492B72A31AEB22950014DED3 /* lighthouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lighthouse.jpg; path = Images/lighthouse.jpg; sourceTree = "<group>"; };
 		492B72A61AEB24A10014DED3 /* Thomson-Reuters.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Thomson-Reuters.jpg"; path = "Images/Thomson-Reuters.jpg"; sourceTree = "<group>"; };
+		492B72A91AEBF23F0014DED3 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		492B72AB1AEC07500014DED3 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		494EDA7F1AE8713F003647A5 /* MasterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		4999917F1AA93BE3008CF211 /* Marc Cuva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marc Cuva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		499991831AA93BE3008CF211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				492B72701AE997540014DED3 /* AnimationController.swift */,
 				499991B21AA95C82008CF211 /* BorderLabel.swift */,
 				492B72761AE9E7940014DED3 /* ScrollingView.swift */,
+				492B72A91AEBF23F0014DED3 /* Colors.swift */,
+				492B72AB1AEC07500014DED3 /* ButtonView.swift */,
 				492B72A51AEB238E0014DED3 /* View Controllers */,
 				492B728B1AEAD1910014DED3 /* HTML */,
 				499991821AA93BE3008CF211 /* Supporting Files */,
@@ -316,7 +322,9 @@
 			files = (
 				492B72A01AEB21540014DED3 /* SkillsVC.swift in Sources */,
 				492B72881AE9F16C0014DED3 /* DecelerationBehaviour.m in Sources */,
+				492B72AC1AEC07500014DED3 /* ButtonView.swift in Sources */,
 				492B72711AE997540014DED3 /* AnimationController.swift in Sources */,
+				492B72AA1AEBF23F0014DED3 /* Colors.swift in Sources */,
 				492B72921AEAD5C10014DED3 /* HTMLFileDisplayer.m in Sources */,
 				494EDA801AE8713F003647A5 /* MasterVC.swift in Sources */,
 				492B72771AE9E7940014DED3 /* ScrollingView.swift in Sources */,
