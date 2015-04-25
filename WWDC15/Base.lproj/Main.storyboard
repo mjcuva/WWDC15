@@ -18,10 +18,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="ccU-Zw-4WY" kind="modal" identifier="Work" id="E6E-jq-haK"/>
-                        <segue destination="ijx-77-l3J" kind="modal" identifier="Education" id="HMM-LB-9Lf"/>
-                        <segue destination="DrU-Er-i0b" kind="modal" identifier="Projects" id="65a-DU-ECs"/>
-                        <segue destination="hzZ-Y7-IcR" kind="modal" identifier="Skills" id="tHG-Sa-ZlS"/>
+                        <segue destination="ccU-Zw-4WY" kind="show" identifier="Work" id="E6E-jq-haK"/>
+                        <segue destination="ijx-77-l3J" kind="show" identifier="Education" id="HMM-LB-9Lf"/>
+                        <segue destination="DrU-Er-i0b" kind="show" identifier="Projects" id="65a-DU-ECs"/>
+                        <segue destination="hzZ-Y7-IcR" kind="show" identifier="Skills" id="tHG-Sa-ZlS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -99,7 +99,8 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
         var button = sender.view!
         animationController.startFrame = button.frame
         animationController.transitionFrame = CGRectMake(0,0, view.frame.size.width, view.frame.height)
-
+        animationController.clickedButton = buttons[button.tag]
+        
         switch button.tag{
         case 0:
             performSegueWithIdentifier("Work", sender: self)

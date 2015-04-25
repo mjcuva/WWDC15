@@ -15,8 +15,12 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     var startFrame = CGRectZero
     var transitionFrame = CGRectZero
     
+    var clickedButton : ButtonView!
+    
+    var transitionContext : UIViewControllerContextTransitioning!
+    
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 0.4
+        return 0.4 
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -28,36 +32,71 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func shrinkVC(transitionContext: UIViewControllerContextTransitioning){
-        var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
-        var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        self.transitionContext = transitionContext
         
-        toViewController.view.frame = transitionFrame
-        transitionContext.containerView().addSubview(toViewController.view)
-        transitionContext.containerView().sendSubviewToBack(toViewController.view)
+        let fromViewController : UIViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        let destinationController: UIViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+
+        transitionContext.containerView().addSubview(destinationController.view)
+        transitionContext.containerView().addSubview(fromViewController.view)
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
-            fromViewController.view.frame = self.startFrame;
-            fromViewController.view.alpha = 0.3
-        }, completion: { (Bool) in
-            fromViewController.removeFromParentViewController()
-            transitionContext.completeTransition(true)
-        })
+        var maskPath = UIBezierPath(ovalInRect: CGRectMake(-fromViewController.view.frame.size.width/2, -fromViewController.view.frame.size.height/2, fromViewController.view.frame.size.height*2, fromViewController.view.frame.size.height*2))
+
+        var maskLayer = CAShapeLayer()
+        maskLayer.frame = fromViewController.view.frame;
+        maskLayer.path = maskPath.CGPath;
+        fromViewController.view.layer.mask = maskLayer;
+        
+
+        var newPath = UIBezierPath(ovalInRect: clickedButton.frame)
+        var pathAnim = CABasicAnimation(keyPath: "path")
+        pathAnim.fromValue = maskPath.CGPath
+        pathAnim.toValue = newPath.CGPath
+        pathAnim.delegate = self
+        pathAnim.duration = transitionDuration(transitionContext)
+        maskLayer.path = newPath.CGPath
+        maskLayer.addAnimation(pathAnim, forKey: "path")
     }
     
     func growVC(transitionContext: UIViewControllerContextTransitioning){
-        var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
-        var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        self.transitionContext = transitionContext
         
-        toViewController.view.frame = startFrame;
-        transitionContext.containerView().addSubview(toViewController.view)
-        toViewController.view.alpha = 0.3
+        let fromViewController : UIViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        let destinationController: UIViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        let destinationView = destinationController.view
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
-            toViewController.view.frame = self.transitionFrame
-            toViewController.view.alpha = 1
-        }, completion: { (Bool) in
+        let containerView = transitionContext.containerView()
+        
+        containerView.addSubview(destinationController.view)
+        
+        let buttonFrame = clickedButton.frame
+        let endFrame = CGRectMake(-CGRectGetWidth(destinationView.frame)/2, -CGRectGetHeight(destinationView.frame)/2, CGRectGetWidth(destinationView.frame)*2, CGRectGetHeight(destinationView.frame)*2)
+        
+        containerView.addSubview(fromViewController.view)
+        containerView.addSubview(destinationView)
+        
+        var maskPath = UIBezierPath(ovalInRect: buttonFrame)
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = destinationView.frame
+        maskLayer.path = maskPath.CGPath
+        destinationController.view.layer.mask = maskLayer
+        
+        let bigCirclePath = UIBezierPath(ovalInRect: endFrame)
+        
+        let pathAnimation = CABasicAnimation(keyPath: "path")
+        pathAnimation.delegate = self
+        pathAnimation.fromValue = maskPath.CGPath
+        pathAnimation.toValue = bigCirclePath
+        pathAnimation.duration = transitionDuration(transitionContext)
+        maskLayer.path = bigCirclePath.CGPath
+        maskLayer.addAnimation(pathAnimation, forKey: "pathAnimation")
+    }
+    
+    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+        if let transitionContext = self.transitionContext {
             transitionContext.completeTransition(true)
-        })
+        }
     }
    
 }

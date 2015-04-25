@@ -14,7 +14,7 @@ class ButtonView: UIView {
     private var _title : String!
     private var _color : UIColor!
     
-    private var imageView : UIImageView!
+    var imageView : UIImageView!
     private var titleLabel : UILabel!
     private var overlay : UIView!
     
