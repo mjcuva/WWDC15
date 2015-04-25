@@ -43,11 +43,11 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.font = UIFont.systemFontOfSize(50)
         
-        bodyText = BorderLabel(frame: CGRectMake(view.frame.size.width / 2, imageView.frame.size.height * 1/2, 400, 100))
+        bodyText = BorderLabel(frame: CGRectMake(view.frame.size.width / 2 - 30, imageView.frame.size.height * 1/2, 400, 100))
         bodyText.font = UIFont.systemFontOfSize(25)
         bodyText.textColor = UIColor.whiteColor()
         bodyText.numberOfLines = 0
-        bodyText.text = "This is the body. It needs to have text in it."
+        bodyText.text = "I'm Marc Cuva, a Computer Science sophomore at the University of Minnesota."
         
         view.addSubview(titleLabel)
         view.addSubview(bodyText)
@@ -63,12 +63,19 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
         buttons.append(UIView(frame: CGRectMake(0, blurImageView.frame.origin.y + blurImageView.frame.size.height / 2 + 2, view.frame.size.width / 2 - 2, blurImageView.frame.size.height / 2 - 2)))
         buttons.append(UIView(frame: CGRectMake(blurImageView.frame.size.width / 2 + 2, blurImageView.frame.origin.y + blurImageView.frame.size.height / 2 + 2, view.frame.size.width / 2 - 2, blurImageView.frame.size.height / 2 - 2)))
         
-        for(var i = 0; i < 4; i++){
+//        buttons.append(UIView(frame: CGRectMake(0, blurImageView.frame.origin.y, view.frame.size.width / 3 - 2, blurImageView.frame.size.height)))
+//
+//        buttons.append(UIView(frame: CGRectMake(buttons[0].frame.size.width + 2, blurImageView.frame.origin.y, view.frame.size.width / 3 - 4, blurImageView.frame.size.height)))
+//        
+//        buttons.append(UIView(frame: CGRectMake(buttons[0].frame.size.width * 2 + 2, blurImageView.frame.origin.y, view.frame.size.width / 3, blurImageView.frame.size.height)))
+        
+        for(var i = 0; i < buttons.count; i++){
             buttons[i].backgroundColor = UIColor.whiteColor()
             buttons[i].alpha = 0.3
             
             var touch = UITapGestureRecognizer(target: self, action: "buttonClick:")
             buttons[i].addGestureRecognizer(touch)
+            buttons[i].tag = i
             
             view.addSubview(buttons[i])
         }
@@ -83,7 +90,19 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
         var button = sender.view!
         animationController.startFrame = button.frame
         animationController.transitionFrame = CGRectMake(0,0, view.frame.size.width, view.frame.height)
-        performSegueWithIdentifier("Work", sender: self)
+
+        switch button.tag{
+        case 0:
+            performSegueWithIdentifier("Work", sender: self)
+        case 1:
+            performSegueWithIdentifier("Education", sender: self)
+        case 2: 
+            performSegueWithIdentifier("Projects", sender: self)
+        case 3:
+            performSegueWithIdentifier("Skills", sender: self)
+        default:
+            NSLog("Shouldn't get here...")
+        }
         
     }
     

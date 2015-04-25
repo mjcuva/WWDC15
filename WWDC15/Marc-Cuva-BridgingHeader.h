@@ -8,3 +8,4 @@
 
 #import "DecelerationBehaviour.h"
 #import "UIImage+StackBlur.h"
+#import "HTMLFileDisplayer.h"

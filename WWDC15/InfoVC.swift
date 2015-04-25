@@ -8,8 +8,29 @@
 
 import UIKit
 
-class InfoVC: UIViewController {
+class InfoVC: UIViewController, UIViewControllerTransitioningDelegate {
     
     var start = CGRectZero
+    var animationController = AnimationController()
+    
+    override func viewDidLoad() {
+        setNeedsStatusBarAppearanceUpdate()
+        
+        var tap = UITapGestureRecognizer(target: self, action: "close")
+        view.addGestureRecognizer(tap)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
+    func close(){
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var end = segue.destinationViewController as! UIViewController
+        end.transitioningDelegate = self;
+    }
     
 }
