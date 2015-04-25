@@ -124,6 +124,18 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		492B72A81AEB612B0014DED3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				492B72A61AEB24A10014DED3 /* Thomson-Reuters.jpg */,
+				492B72A31AEB22950014DED3 /* lighthouse.jpg */,
+				492B729D1AEB20270014DED3 /* hidrate.png */,
+				492B72971AEB1DD20014DED3 /* umn.jpg */,
+				499991A71AA94A8F008CF211 /* IMG_0247.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		499991761AA93BE3008CF211 = {
 			isa = PBXGroup;
 			children = (
@@ -156,11 +168,8 @@
 				499991B21AA95C82008CF211 /* BorderLabel.swift */,
 				492B72761AE9E7940014DED3 /* ScrollingView.swift */,
 				492B72A51AEB238E0014DED3 /* View Controllers */,
-				4999918B1AA93BE3008CF211 /* Images.xcassets */,
-				4999918D1AA93BE3008CF211 /* LaunchScreen.xib */,
 				492B728B1AEAD1910014DED3 /* HTML */,
 				499991821AA93BE3008CF211 /* Supporting Files */,
-				492B728A1AE9F1920014DED3 /* Marc-Cuva-BridgingHeader.h */,
 			);
 			path = WWDC15;
 			sourceTree = "<group>";
@@ -168,13 +177,12 @@
 		499991821AA93BE3008CF211 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				492B72A61AEB24A10014DED3 /* Thomson-Reuters.jpg */,
+				492B72A81AEB612B0014DED3 /* Images */,
 				499991841AA93BE3008CF211 /* AppDelegate.swift */,
-				492B72A31AEB22950014DED3 /* lighthouse.jpg */,
-				492B729D1AEB20270014DED3 /* hidrate.png */,
-				492B72971AEB1DD20014DED3 /* umn.jpg */,
-				499991A71AA94A8F008CF211 /* IMG_0247.jpg */,
 				499991831AA93BE3008CF211 /* Info.plist */,
+				492B728A1AE9F1920014DED3 /* Marc-Cuva-BridgingHeader.h */,
+				4999918B1AA93BE3008CF211 /* Images.xcassets */,
+				4999918D1AA93BE3008CF211 /* LaunchScreen.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

@@ -32,7 +32,7 @@ class WorkVC: InfoVC, ScrollingViewProtocol {
         
         var sv = ScrollingView(frame: CGRectMake(0, 360, view.frame.size.width, 100))
         
-        var num1 = HTMLFileDisplayer(contentsOfFile: "work", andFrame: CGRectMake(0, 0, view.frame.size.width, 0))
+        var num1 = HTMLFileDisplayer(contentsOfFile: "work", andFrame: CGRectMake(20, 0, view.frame.size.width - 40, 0))
         num1.sizeToFitHeight()
         
         var v = UIView(frame: CGRectMake(0, num1.frame.size.height, view.frame.size.width, 1000))
