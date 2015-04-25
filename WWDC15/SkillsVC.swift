@@ -31,7 +31,7 @@ class SkillsVC: InfoVC, ScrollingViewProtocol {
         
         var sv = ScrollingView(frame: CGRectMake(0, 500, view.frame.size.width, 100))
         
-        var num1 = HTMLFileDisplayer(contentsOfFile: "skills", andFrame: CGRectMake(0, 0, view.frame.size.width, 0))
+        var num1 = HTMLFileDisplayer(contentsOfFile: "skills", andFrame: CGRectMake(20, 0, view.frame.size.width - 40, 0))
         num1.sizeToFitHeight()
         
         var v = UIView(frame: CGRectMake(0, num1.frame.size.height, view.frame.size.width, 1000))
@@ -49,7 +49,7 @@ class SkillsVC: InfoVC, ScrollingViewProtocol {
     func didScroll(scroller: ScrollingView) {
         let offset = scroller.offset
         var scrollViewHeight = scroller.frame.size.height
-        mainImageView.alpha = 1 - (offset / (view.frame.size.height / 5))
+        mainImageView.alpha = 1 - (offset / (scrollViewHeight / 5))
     }
     
 }

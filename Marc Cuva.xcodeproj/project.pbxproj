@@ -27,6 +27,13 @@
 		492B72A71AEB24A10014DED3 /* Thomson-Reuters.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 492B72A61AEB24A10014DED3 /* Thomson-Reuters.jpg */; };
 		492B72AA1AEBF23F0014DED3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B72A91AEBF23F0014DED3 /* Colors.swift */; };
 		492B72AC1AEC07500014DED3 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B72AB1AEC07500014DED3 /* ButtonView.swift */; };
+		492B72AE1AEC40540014DED3 /* hidrate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 492B72AD1AEC40540014DED3 /* hidrate.jpg */; };
+		492B72B01AEC41AC0014DED3 /* projects2.html in Resources */ = {isa = PBXBuildFile; fileRef = 492B72AF1AEC41AC0014DED3 /* projects2.html */; };
+		492B72B21AEC44470014DED3 /* work2.html in Resources */ = {isa = PBXBuildFile; fileRef = 492B72B11AEC44470014DED3 /* work2.html */; };
+		492B72B41AEC46080014DED3 /* es.png in Resources */ = {isa = PBXBuildFile; fileRef = 492B72B31AEC46080014DED3 /* es.png */; };
+		492B72B61AEC4E0C0014DED3 /* wwdc14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 492B72B51AEC4E0C0014DED3 /* wwdc14.jpg */; };
+		492B72B81AEC517E0014DED3 /* connectedwire.png in Resources */ = {isa = PBXBuildFile; fileRef = 492B72B71AEC517E0014DED3 /* connectedwire.png */; };
+		492B72BA1AEC52570014DED3 /* projects3.html in Resources */ = {isa = PBXBuildFile; fileRef = 492B72B91AEC52570014DED3 /* projects3.html */; };
 		494EDA801AE8713F003647A5 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EDA7F1AE8713F003647A5 /* MasterVC.swift */; };
 		499991851AA93BE3008CF211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499991841AA93BE3008CF211 /* AppDelegate.swift */; };
 		4999918A1AA93BE3008CF211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499991881AA93BE3008CF211 /* Main.storyboard */; };
@@ -72,6 +79,13 @@
 		492B72A61AEB24A10014DED3 /* Thomson-Reuters.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Thomson-Reuters.jpg"; path = "Images/Thomson-Reuters.jpg"; sourceTree = "<group>"; };
 		492B72A91AEBF23F0014DED3 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		492B72AB1AEC07500014DED3 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		492B72AD1AEC40540014DED3 /* hidrate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hidrate.jpg; path = Images/hidrate.jpg; sourceTree = "<group>"; };
+		492B72AF1AEC41AC0014DED3 /* projects2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = projects2.html; sourceTree = "<group>"; };
+		492B72B11AEC44470014DED3 /* work2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = work2.html; sourceTree = "<group>"; };
+		492B72B31AEC46080014DED3 /* es.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = es.png; path = Images/es.png; sourceTree = "<group>"; };
+		492B72B51AEC4E0C0014DED3 /* wwdc14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wwdc14.jpg; path = Images/wwdc14.jpg; sourceTree = "<group>"; };
+		492B72B71AEC517E0014DED3 /* connectedwire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = connectedwire.png; path = Images/connectedwire.png; sourceTree = "<group>"; };
+		492B72B91AEC52570014DED3 /* projects3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = projects3.html; sourceTree = "<group>"; };
 		494EDA7F1AE8713F003647A5 /* MasterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		4999917F1AA93BE3008CF211 /* Marc Cuva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marc Cuva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		499991831AA93BE3008CF211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,8 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				492B728C1AEAD1C80014DED3 /* work.html */,
+				492B72B11AEC44470014DED3 /* work2.html */,
 				492B72951AEB1C710014DED3 /* education.html */,
 				492B729B1AEB1F180014DED3 /* projects.html */,
+				492B72AF1AEC41AC0014DED3 /* projects2.html */,
+				492B72B91AEC52570014DED3 /* projects3.html */,
 				492B72A11AEB21730014DED3 /* skills.html */,
 			);
 			name = HTML;
@@ -131,6 +148,10 @@
 		492B72A81AEB612B0014DED3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				492B72B71AEC517E0014DED3 /* connectedwire.png */,
+				492B72B51AEC4E0C0014DED3 /* wwdc14.jpg */,
+				492B72B31AEC46080014DED3 /* es.png */,
+				492B72AD1AEC40540014DED3 /* hidrate.jpg */,
 				492B72A61AEB24A10014DED3 /* Thomson-Reuters.jpg */,
 				492B72A31AEB22950014DED3 /* lighthouse.jpg */,
 				492B729D1AEB20270014DED3 /* hidrate.png */,
@@ -292,15 +313,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				492B72A41AEB22950014DED3 /* lighthouse.jpg in Resources */,
+				492B72B41AEC46080014DED3 /* es.png in Resources */,
 				499991A81AA94A8F008CF211 /* IMG_0247.jpg in Resources */,
+				492B72B21AEC44470014DED3 /* work2.html in Resources */,
 				492B72961AEB1C710014DED3 /* education.html in Resources */,
 				492B72A21AEB21730014DED3 /* skills.html in Resources */,
 				492B729C1AEB1F180014DED3 /* projects.html in Resources */,
 				492B72981AEB1DD20014DED3 /* umn.jpg in Resources */,
 				4999918A1AA93BE3008CF211 /* Main.storyboard in Resources */,
+				492B72AE1AEC40540014DED3 /* hidrate.jpg in Resources */,
 				4999918F1AA93BE3008CF211 /* LaunchScreen.xib in Resources */,
+				492B72B61AEC4E0C0014DED3 /* wwdc14.jpg in Resources */,
+				492B72BA1AEC52570014DED3 /* projects3.html in Resources */,
+				492B72B81AEC517E0014DED3 /* connectedwire.png in Resources */,
 				492B729E1AEB20270014DED3 /* hidrate.png in Resources */,
 				492B72A71AEB24A10014DED3 /* Thomson-Reuters.jpg in Resources */,
+				492B72B01AEC41AC0014DED3 /* projects2.html in Resources */,
 				492B728D1AEAD1C80014DED3 /* work.html in Resources */,
 				4999918C1AA93BE3008CF211 /* Images.xcassets in Resources */,
 			);

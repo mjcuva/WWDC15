@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class WorkVC: InfoVC, ScrollingViewProtocol {
     
@@ -17,7 +18,7 @@ class WorkVC: InfoVC, ScrollingViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let mainFrame = CGRectMake(0, 0, self.view.frame.size.width, 360)
+        let mainFrame = CGRectMake(0, 0, view.frame.size.width, 360)
         
         let image = UIImage(named: "Thomson-Reuters.jpg")!
         mainImageView = UIImageView(frame: mainFrame)
@@ -32,14 +33,29 @@ class WorkVC: InfoVC, ScrollingViewProtocol {
         
         var sv = ScrollingView(frame: CGRectMake(0, 360, view.frame.size.width, 100))
         
-        var num1 = HTMLFileDisplayer(contentsOfFile: "work", andFrame: CGRectMake(20, 0, view.frame.size.width - 40, 0))
+        var runningHeight : CGFloat = 0
+        
+        var num1 = HTMLFileDisplayer(contentsOfFile: "work", andFrame: CGRectMake(20, 0, view.frame.size.width - 20, 0))
         num1.sizeToFitHeight()
         
-        var v = UIView(frame: CGRectMake(0, num1.frame.size.height, view.frame.size.width, 1000))
-        v.backgroundColor = UIColor.redColor()
+        runningHeight += num1.frame.size.height + 20
+        
+        let esImage = UIImage(named: "es.png")!
+        let ratio = view.frame.size.width/esImage.size.width;
+        let height = esImage.size.height*ratio;
+        let esImageView = UIImageView(frame: CGRectMake(0, runningHeight, view.frame.size.width, height))
+        esImageView.backgroundColor = UIColor(white: 0.5, alpha: 0.7)
+        esImageView.image = esImage
+        
+        runningHeight += esImageView.frame.size.height
+        
+        var num2 = HTMLFileDisplayer(contentsOfFile: "work2", andFrame: CGRectMake(20, runningHeight, view.frame.size.width - 20, 0))
+        num2.sizeToFitHeight()
+        
         
         sv.addSubview(num1)
-        sv.addSubview(v)
+        sv.addSubview(esImageView)
+        sv.addSubview(num2)
         sv.delegate = self
         
         view.addSubview(sv)
@@ -49,7 +65,7 @@ class WorkVC: InfoVC, ScrollingViewProtocol {
     func didScroll(scroller: ScrollingView) {
         let offset = scroller.offset
         var scrollViewHeight = scroller.frame.size.height
-        mainImageView.alpha = 1 - (offset / (view.frame.size.height / 5))
+        mainImageView.alpha = 1 - (offset / (scrollViewHeight / 5))
     }
     
 

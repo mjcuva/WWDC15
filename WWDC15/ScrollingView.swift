@@ -75,8 +75,8 @@ class ScrollingView: UIView, DecelerationBehaviourTarget {
         direction = (translation.y < 0) ? -1 : 1
         if(offset < 0){
             offset = 0
-        }else if(offset > frame.size.height){
-            offset = frame.size.height
+        }else{
+            offset = abs(frame.origin.y - startingY)
         }
         if(newY + frame.size.height < superview!.frame.size.height){
             newY = superview!.frame.size.height - frame.size.height

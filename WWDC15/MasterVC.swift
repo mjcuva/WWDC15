@@ -70,7 +70,7 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
 
         
         var colors = [ORANGE_COLOR, LIGHT_BLUE_COLOR, BLUE_COLOR, RED_COLOR]
-        var images = ["Thomson-Reuters.jpg", "umn.jpg", "hidrate.png", "lighthouse.jpg"]
+        var images = ["Thomson-Reuters.jpg", "umn.jpg", "wwdc14.jpg", "lighthouse.jpg"]
         var buttonText = ["Work Experience", "Education", "Accomplishments", "Skills & Interests"]
         
         for(var i = 0; i < buttons.count; i++){
