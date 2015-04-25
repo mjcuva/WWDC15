@@ -40,7 +40,7 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
         transitionContext.containerView().addSubview(destinationController.view)
         transitionContext.containerView().addSubview(fromViewController.view)
         
-        var maskPath = UIBezierPath(ovalInRect: CGRectMake(-fromViewController.view.frame.size.width/2, -fromViewController.view.frame.size.height/2, fromViewController.view.frame.size.height*2, fromViewController.view.frame.size.height*2))
+        var maskPath = UIBezierPath(rect: CGRectMake(-fromViewController.view.frame.size.width/2, -fromViewController.view.frame.size.height/2, fromViewController.view.frame.size.height*2, fromViewController.view.frame.size.height*2))
 
         var maskLayer = CAShapeLayer()
         maskLayer.frame = fromViewController.view.frame;
@@ -48,14 +48,15 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
         fromViewController.view.layer.mask = maskLayer;
         
 
-        var newPath = UIBezierPath(ovalInRect: clickedButton.frame)
+        var newPath = UIBezierPath(rect: clickedButton.frame)
         var pathAnim = CABasicAnimation(keyPath: "path")
         pathAnim.fromValue = maskPath.CGPath
         pathAnim.toValue = newPath.CGPath
-        pathAnim.delegate = self
         pathAnim.duration = transitionDuration(transitionContext)
+        pathAnim.delegate = self
         maskLayer.path = newPath.CGPath
         maskLayer.addAnimation(pathAnim, forKey: "path")
+
     }
     
     func growVC(transitionContext: UIViewControllerContextTransitioning){
@@ -75,14 +76,14 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
         containerView.addSubview(fromViewController.view)
         containerView.addSubview(destinationView)
         
-        var maskPath = UIBezierPath(ovalInRect: buttonFrame)
+        var maskPath = UIBezierPath(rect: buttonFrame)
         
         let maskLayer = CAShapeLayer()
         maskLayer.frame = destinationView.frame
         maskLayer.path = maskPath.CGPath
         destinationController.view.layer.mask = maskLayer
         
-        let bigCirclePath = UIBezierPath(ovalInRect: endFrame)
+        let bigCirclePath = UIBezierPath(rect: endFrame)
         
         let pathAnimation = CABasicAnimation(keyPath: "path")
         pathAnimation.delegate = self
@@ -94,9 +95,7 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
-        if let transitionContext = self.transitionContext {
-            transitionContext.completeTransition(true)
-        }
+        transitionContext.completeTransition(true)
     }
    
 }
