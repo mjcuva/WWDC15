@@ -156,6 +156,7 @@
 		492B72A51AEB238E0014DED3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				492B72AD1AEC40540014DED3 /* hidrate.jpg */,
 				494EDA7F1AE8713F003647A5 /* MasterVC.swift */,
 				492B72741AE9DCEB0014DED3 /* InfoVC.swift */,
 				492B72721AE9DA3D0014DED3 /* WorkVC.swift */,
@@ -174,7 +175,6 @@
 				492B72B71AEC517E0014DED3 /* connectedwire.png */,
 				492B72B51AEC4E0C0014DED3 /* wwdc14.jpg */,
 				492B72B31AEC46080014DED3 /* es.png */,
-				492B72AD1AEC40540014DED3 /* hidrate.jpg */,
 				492B72A61AEB24A10014DED3 /* Thomson-Reuters.jpg */,
 				492B72A31AEB22950014DED3 /* lighthouse.jpg */,
 				492B729D1AEB20270014DED3 /* hidrate.png */,
