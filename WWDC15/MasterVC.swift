@@ -27,8 +27,6 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
         
         super.viewDidLoad()
         
-        setNeedsStatusBarAppearanceUpdate()
-        
         image = UIImage(named: "IMG_0247.jpg")
         var aspectRatio = view.frame.size.width / image.size.width
         imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, view.frame.size.height * aspectRatio))
@@ -88,6 +86,8 @@ class MasterVC : UIViewController, UIViewControllerTransitioningDelegate {
             
             view.addSubview(buttons[i])
         }
+        
+        UIApplication.sharedApplication().statusBarHidden = true
         
     }
     

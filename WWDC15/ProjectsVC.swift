@@ -16,6 +16,8 @@ class ProjectsVC: InfoVC, ScrollingViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setNeedsStatusBarAppearanceUpdate()
+        
         let mainFrame = CGRectMake(0, 0, self.view.frame.size.width, 450)
         
         let image = UIImage(named: "wwdc14.jpg")!
@@ -72,6 +74,11 @@ class ProjectsVC: InfoVC, ScrollingViewProtocol {
         view.addSubview(sv)
         
         
+    }
+    
+    // White background in this vc
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.Default
     }
     
     func didScroll(scroller: ScrollingView) {

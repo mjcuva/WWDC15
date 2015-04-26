@@ -38,7 +38,7 @@ class WorkVC: InfoVC, ScrollingViewProtocol {
         var num1 = HTMLFileDisplayer(contentsOfFile: "work", andFrame: CGRectMake(20, 0, view.frame.size.width - 20, 0))
         num1.sizeToFitHeight()
         
-        runningHeight += num1.frame.size.height + 20
+        runningHeight += num1.frame.size.height - 30
         
         let esImage = UIImage(named: "es.png")!
         let ratio = view.frame.size.width/esImage.size.width;
@@ -68,7 +68,9 @@ class WorkVC: InfoVC, ScrollingViewProtocol {
         mainImageView.alpha = 1 - (offset / (scrollViewHeight / 5))
     }
     
-
-    
+    func updateStatusBar(style: UIStatusBarStyle) {
+        UIApplication.sharedApplication().statusBarStyle = style
+        setNeedsStatusBarAppearanceUpdate()
+    }
     
 }

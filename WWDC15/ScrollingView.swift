@@ -8,8 +8,9 @@
 
 import UIKit
 
-protocol ScrollingViewProtocol{
+@objc protocol ScrollingViewProtocol{
     func didScroll(scroller : ScrollingView)
+    optional func updateStatusBar(style : UIStatusBarStyle)
 }
 
 class ScrollingView: UIView, DecelerationBehaviourTarget {
@@ -87,6 +88,11 @@ class ScrollingView: UIView, DecelerationBehaviourTarget {
         
         if let d = delegate {
             d.didScroll(self)
+            if(newY < 0){
+                d.updateStatusBar?(UIStatusBarStyle.Default)
+            }else{
+                d.updateStatusBar?(UIStatusBarStyle.LightContent)
+            }
         }
         
     }
