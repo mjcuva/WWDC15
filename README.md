@@ -1,3 +1,3 @@
 # WWDC15
 
-Winning Submission (Hopefully)
+Winning Submission for Apple's WWDC Student Scholarship 
